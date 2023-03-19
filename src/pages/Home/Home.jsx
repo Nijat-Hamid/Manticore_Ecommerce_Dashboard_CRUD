@@ -33,7 +33,7 @@ function Home() {
   }, [dispatch]);
   
   return (
-    <Box >
+    <Box minH="90vh">
       <Container maxW="1400px" centerContent>
         <HStack spacing={5} mt="12px" >
           <Select
