@@ -154,8 +154,8 @@ function Header({setNav}) {
                 bg="miniCard"
                 aria-label="Basket"
                 // size={{base:"sm",md:"md"}}
-                w={{base:"28px",sm:"30px", md:"32px"}}
-                h={{base:"30px",sm:"32px",md:"34px"}}
+                w={{base:"30px",sm:"34px", md:"36px"}}
+                h={{base:"34px",sm:"38px",md:"40px"}}
                 icon={
                   <Icon w={{base:"14px", sm:"16px",md:"18px"}} h={{base:"14px", sm:"16px",md:"18px"}} color="textThird" as={BsBasket} />
                 }
@@ -174,8 +174,8 @@ function Header({setNav}) {
             <IconButton
               bg="miniCard"
               onClick={toggleColorMode}
-              w={{base:"28px",sm:"30px", md:"32px"}}
-                h={{base:"30px",sm:"32px",md:"34px"}}
+              w={{base:"30px",sm:"34px", md:"36px"}}
+                h={{base:"34px",sm:"38px",md:"40px"}}
               aria-label="Dark & Light Mode"
               icon={
                 <Icon w={{base:"14px", sm:"16px",md:"18px"}} h={{base:"14px", sm:"16px",md:"18px"}} color="textThird" as={systemMode} />
