@@ -72,7 +72,7 @@ function Product(props) {
               ></IconButton>
             </ButtonGroup>
             <Text fontWeight="600" fontSize="xl">
-              ${props.product.config.price * quantity}
+              ${props.product.config?.price * quantity}
             </Text>
           </Stack>
         </CardBody>
