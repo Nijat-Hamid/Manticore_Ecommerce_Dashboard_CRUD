@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Invoice from "./pages/Invoice/Invoice.jsx";
 import SingleProducts from "./pages/SingleProduct/SingleProducts.jsx";
 import TechStack from "./pages/TechStack/TechStack.jsx";
+import Test from "./pages/Test/Test.jsx";
 
 function App() {
   const bgShape = useColorModeValue(bgShapeLight, bgShapeDark);
@@ -30,6 +31,7 @@ function App() {
             <Route path="/invoice" element={<Invoice/>} />
             <Route path="/products/:productID" element={<SingleProducts/>} />
             <Route path="/tech" element={<TechStack/>} />
+            <Route path="/test" element={<Test/>} />
           </Routes>
         </Layout>
       </Router>
