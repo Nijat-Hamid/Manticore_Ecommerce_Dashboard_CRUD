@@ -12,14 +12,13 @@ import TechStack from "./pages/TechStack/TechStack.jsx";
 import Test from "./pages/Test/Test.jsx";
 
 function App() {
-  const bgShape = useColorModeValue(bgShapeLight, bgShapeDark);
+  // const bgShape = useColorModeValue(bgShapeLight, bgShapeDark);
   return (
     <chakra.div
-      bgImage={bgShape}
-      bgRepeat="no-repeat"
-      bgAttachment="fixed"
-      minH="100vh"
-      bgPosition="top left"
+      // bgImage={bgShape}
+      // bgRepeat="no-repeat"
+      // bgAttachment="fixed"
+      // bgPosition="top left"
       className="App"
     >
       <Router>
