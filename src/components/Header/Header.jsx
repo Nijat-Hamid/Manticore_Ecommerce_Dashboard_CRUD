@@ -193,7 +193,7 @@ function Header({setNav}) {
                   }}
                   as={IconButton}
                   aria-label="Options"
-                  icon={<Avatar size={{base:"xs",sm:"sm"}} name="Nijat Hamid" src={avatar} />}
+                  icon={<Avatar size="sm" name="Nijat Hamid" src={avatar} />}
                   variant="outline"
                 />
               </Menu>
