@@ -29,7 +29,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/invoice" element={<Invoice/>} />
             <Route path="/products/:productID" element={<SingleProducts/>} />
-            <Route path="tech" element={<TechStack/>} />
+            <Route path="/tech" element={<TechStack/>} />
           </Routes>
         </Layout>
       </Router>
