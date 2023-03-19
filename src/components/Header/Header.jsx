@@ -182,7 +182,7 @@ function Header({setNav}) {
               }
             />
             <Box>
-              <Menu gutter="12">
+              {/* <Menu gutter="12">
                 <MenuButton
                   bg="miniCard"
                   w={{base:"28px",sm:"30px", md:"32px"}}
@@ -196,7 +196,7 @@ function Header({setNav}) {
                   icon={<Avatar size={{base:"xs",sm:"sm"}} name="Nijat Hamid" src={avatar} />}
                   variant="outline"
                 />
-              </Menu>
+              </Menu> */}
             </Box>
           </HStack>
         </Flex>
