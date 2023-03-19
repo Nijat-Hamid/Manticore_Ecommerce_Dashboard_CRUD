@@ -173,9 +173,8 @@ function Header({ setNav }) {
                 onClick={onOpen}
                 bg="miniCard"
                 aria-label="Basket"
-                // size={{base:"sm",md:"md"}}
-                w={{ base: "30px", sm: "34px", md: "36px" }}
-                h={{ base: "34px", sm: "38px", md: "40px" }}
+                w={{ base: "32px", sm: "34px", md: "36px" }}
+                h={{ base: "32px", sm: "34px", md: "36px" }}
                 icon={
                   <Icon
                     w={{ base: "16px", sm: "18px", md: "20px" }}
@@ -199,8 +198,8 @@ function Header({ setNav }) {
             <IconButton
               bg="miniCard"
               onClick={toggleColorMode}
-              w="30px"
-              h="34px"
+              w={{ base: "32px", sm: "34px", md: "36px" }}
+              h={{ base: "32px", sm: "34px", md: "36px" }}
               aria-label="Dark & Light Mode"
               icon={
                 <Icon
@@ -215,8 +214,8 @@ function Header({ setNav }) {
               <Menu gutter="12">
                 <MenuButton
                   bg="miniCard"
-                  w="30px"
-                  h="34px"
+                  w={{ base: "32px", sm: "34px", md: "36px" }}
+                  h={{ base: "32px", sm: "34px", md: "36px" }}
                   borderColor="transparent"
                   _hover={{
                     bg: "miniCard",
