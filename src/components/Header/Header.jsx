@@ -35,20 +35,20 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { BsSun, BsMoonFill, BsBasket } from "react-icons/bs";
-import {HiMenuAlt1} from "react-icons/hi"
+import { HiMenuAlt1 } from "react-icons/hi";
 import {
   AiOutlineSearch,
   AiOutlineUser,
   AiOutlineSetting,
   AiOutlineDelete,
-  AiOutlineMenu
+  AiOutlineMenu,
 } from "react-icons/ai";
 import { MdLogout } from "react-icons/md";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import avatar from "../../assets/img/avatar.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCard } from "../../redux/cardSlice/cardSlice.jsx";
-function Header({setNav}) {
+function Header({ setNav }) {
   const { toggleColorMode } = useColorMode();
   const systemMode = useColorModeValue(BsSun, BsMoonFill);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,10 +57,14 @@ function Header({setNav}) {
   const totalAmount = useSelector((state) => state.cart.cardTotalAmount);
   const dispatch = useDispatch();
   const [delID, setDelID] = useState([]);
-  
-  useEffect(() => {
-    dispatch(deleteCard(delID));
-  }, [delID],[dispatch]);
+
+  useEffect(
+    () => {
+      dispatch(deleteCard(delID));
+    },
+    [delID],
+    [dispatch]
+  );
 
   return (
     <HStack pt="20px" bg="transparent" as="header">
@@ -122,9 +126,12 @@ function Header({setNav}) {
                   </Card>
                 ))
               ) : (
-                <Heading textAlign="center" fontSize={{base:"xl",sm:"3xl"}}>
+                <Heading
+                  textAlign="center"
+                  fontSize={{ base: "xl", sm: "3xl" }}
+                >
                   Empty!{" "}
-                  <Text mt={4} fontSize={{base:"sm",sm:"md"}}>
+                  <Text mt={4} fontSize={{ base: "sm", sm: "md" }}>
                     Please,add item to basket!
                   </Text>
                 </Heading>
@@ -143,7 +150,20 @@ function Header({setNav}) {
           </DrawerContent>
         </Drawer>
         <Flex align="center" justify="space-between">
-          <IconButton bg="miniCard" fontSize="lg" display={{base:"block", lg:"none"}} icon={<Icon w="20px" h="20px" color="textThird" onClick={setNav} as={HiMenuAlt1}/>}/>
+          <IconButton
+            bg="miniCard"
+            fontSize="lg"
+            display={{ base: "block", lg: "none" }}
+            icon={
+              <Icon
+                w="20px"
+                h="20px"
+                color="textThird"
+                onClick={setNav}
+                as={HiMenuAlt1}
+              />
+            }
+          />
           <Text fontWeight="500">Dashboard</Text>
 
           <HStack spacing="7px">
@@ -154,10 +174,15 @@ function Header({setNav}) {
                 bg="miniCard"
                 aria-label="Basket"
                 // size={{base:"sm",md:"md"}}
-                w={{base:"30px",sm:"34px", md:"36px"}}
-                h={{base:"34px",sm:"38px",md:"40px"}}
+                w={{ base: "30px", sm: "34px", md: "36px" }}
+                h={{ base: "34px", sm: "38px", md: "40px" }}
                 icon={
-                  <Icon w={{base:"16px", sm:"18px",md:"20px"}} h={{base:"16px", sm:"18px",md:"20px"}} color="textThird" as={BsBasket} />
+                  <Icon
+                    w={{ base: "16px", sm: "18px", md: "20px" }}
+                    h={{ base: "16px", sm: "18px", md: "20px" }}
+                    color="textThird"
+                    as={BsBasket}
+                  />
                 }
               />
               <Badge
@@ -174,19 +199,24 @@ function Header({setNav}) {
             <IconButton
               bg="miniCard"
               onClick={toggleColorMode}
-              w={{base:"30px",sm:"34px", md:"36px"}}
-                h={{base:"34px",sm:"38px",md:"40px"}}
+              w="30px"
+              h="34px"
               aria-label="Dark & Light Mode"
               icon={
-                <Icon w={{base:"16px", sm:"18px",md:"20px"}} h={{base:"16px", sm:"18px",md:"20px"}} color="textThird" as={systemMode} />
+                <Icon
+                  w={{ base: "16px", sm: "18px", md: "20px" }}
+                  h={{ base: "16px", sm: "18px", md: "20px" }}
+                  color="textThird"
+                  as={systemMode}
+                />
               }
             />
             <Box>
               <Menu gutter="12">
                 <MenuButton
                   bg="miniCard"
-                  w={{base:"28px",sm:"30px", md:"32px"}}
-                h={{base:"30px",sm:"32px",md:"34px"}}
+                  w="30px"
+                  h="34px"
                   borderColor="transparent"
                   _hover={{
                     bg: "miniCard",
