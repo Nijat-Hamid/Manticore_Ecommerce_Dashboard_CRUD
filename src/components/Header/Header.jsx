@@ -157,7 +157,7 @@ function Header({setNav}) {
                 w={{base:"30px",sm:"34px", md:"36px"}}
                 h={{base:"34px",sm:"38px",md:"40px"}}
                 icon={
-                  <Icon w={{base:"14px", sm:"16px",md:"18px"}} h={{base:"14px", sm:"16px",md:"18px"}} color="textThird" as={BsBasket} />
+                  <Icon w={{base:"16px", sm:"18px",md:"20px"}} h={{base:"16px", sm:"18px",md:"20px"}} color="textThird" as={BsBasket} />
                 }
               />
               <Badge
@@ -178,7 +178,7 @@ function Header({setNav}) {
                 h={{base:"34px",sm:"38px",md:"40px"}}
               aria-label="Dark & Light Mode"
               icon={
-                <Icon w={{base:"14px", sm:"16px",md:"18px"}} h={{base:"14px", sm:"16px",md:"18px"}} color="textThird" as={systemMode} />
+                <Icon w={{base:"16px", sm:"18px",md:"20px"}} h={{base:"16px", sm:"18px",md:"20px"}} color="textThird" as={systemMode} />
               }
             />
             <Box>
