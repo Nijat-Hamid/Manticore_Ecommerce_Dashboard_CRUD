@@ -18,9 +18,9 @@ function Footer() {
         <Flex h="4rem" justify="space-between" align="center">
           <HStack spacing="7px">
             <Image
-              width="2rem"
-              height="2rem"
-              objectFit="cover"
+              width="2.4rem"
+              height="2.4rem"
+              objectFit="contain"
               src={logo}
               alt="Manticore"
             />
