@@ -7,12 +7,11 @@ import {
   Select,
   HStack,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState,memo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Product from "../../components/Product/Product.jsx";
 import { fetchProducts } from "../../redux/productSlice/productSlice.jsx";
 import Pagination from "../../components/Pagination/Pagination.jsx";
-
 function Home() {
   const [sort, setSort] = useState("reversed");
   const [filter, setFilter] = useState(" ");
@@ -83,4 +82,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default memo(Home);

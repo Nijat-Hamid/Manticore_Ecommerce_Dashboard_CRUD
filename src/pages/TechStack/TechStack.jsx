@@ -12,6 +12,7 @@ import firebase from "../../assets/img/firebase.png"
 import chakraui from "../../assets/img/chakra.jpg"
 import rtk from "../../assets/img/reduxtoolkit.png"
 import javascript from "../../assets/img/javascript.png"
+import { memo } from "react";
 
 const testimonials = [
   {
@@ -184,4 +185,4 @@ function TechStack() {
   );
 }
 
-export default TechStack;
+export default memo(TechStack);
