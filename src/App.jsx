@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { chakra, useColorModeValue, Spinner } from "@chakra-ui/react";
+import { chakra, useColorModeValue } from "@chakra-ui/react";
 import bgShapeLight from "./assets/img/effect-onlight.png";
 import bgShapeDark from "./assets/img/effect-ondark.png";
 import { lazy, Suspense } from "react";

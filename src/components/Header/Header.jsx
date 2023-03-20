@@ -51,8 +51,7 @@ function Header({ setNav }) {
     () => {
       dispatch(deleteCard(delID));
     },
-    [delID],
-    [dispatch]
+    [delID,dispatch]
   );
 
   return (
