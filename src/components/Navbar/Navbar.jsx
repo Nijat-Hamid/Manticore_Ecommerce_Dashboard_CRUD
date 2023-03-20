@@ -17,30 +17,30 @@ import { motion } from "framer-motion";
 import logoLight from "../../assets/img/logo-light.png";
 import logoDark from "../../assets/img/logo-dark.png";
 import { NavData } from "../../data/NavData.jsx";
-import {HiMenuAlt3} from "react-icons/hi"
+import { HiMenuAlt3 } from "react-icons/hi"
 import { memo } from "react";
 
-function Navbar({navState,setNav}) {
+function Navbar({ navState, setNav }) {
   const logo = useColorModeValue(logoDark, logoLight);
   const [hover, isHover] = useBoolean();
   return (
     <Box
       as={motion.nav}
-      w={{base:"250px", lg:"90px"}}
+      w={{ base: "250px", lg: "90px" }}
       bg="bodyColor"
       p="25px 22px 0 25px"
       h="100vh"
       top="0"
-      left={{base: navState? "0":"-500px",lg:'0'}}
+      left={{ base: navState ? "0" : "-500px", lg: '0' }}
       zIndex="333"
       mixBlendMode="normal"
-      position={{base:"absolute", lg:"fixed"}}
+      position={{ base: "absolute", lg: "fixed" }}
       overflow="hidden"
       borderRadius="0px 40px 40px 0px"
       transition="0.35s ease-out"
       onMouseEnter={isHover.on}
       onMouseLeave={isHover.off}
-      _hover={{base:"", lg:{ w: "270px" }}}
+      _hover={{ base: "", lg: { w: "270px" } }}
     >
       <HStack spacing="17px">
         <Image
@@ -51,56 +51,57 @@ function Navbar({navState,setNav}) {
           alt="Manticore Dashboard"
         />
         <Text
-          pointerEvents={{base:"all", lg:hover ? "all" : "none"}}
-          visibility={{base:"visible", lg:hover ? "visible" : "hidden"}}
-          opacity={{base:"1",lg:hover ? "1" : "0"}}
+          pointerEvents={{ base: "all", lg: hover ? "all" : "none" }}
+          visibility={{ base: "visible", lg: hover ? "visible" : "hidden" }}
+          opacity={{ base: "1", lg: hover ? "1" : "0" }}
           transition=".35s ease-out"
           letterSpacing="0.2px"
-          fontSize={{base:"lg",lg:"xl"}}
+          fontSize={{ base: "lg", lg: "xl" }}
           textTransform="uppercase"
           fontWeight="600"
         >
           Manticore
         </Text>
         <IconButton
-        display={{base:"block", lg:"none"}}
-              bg="miniCard"
-              onClick={setNav}
-              aria-label="Dark & Light Mode"
-              size="sm"
-              icon={
-                <Icon w="20px" h="20px" color="textThird" as={HiMenuAlt3} />
-              }
-          />
+          display={{ base: "block", lg: "none" }}
+          bg="miniCard"
+          onClick={setNav}
+          aria-label="Dark & Light Mode"
+          size="sm"
+          icon={
+            <Icon w="20px" h="20px" color="textThird" as={HiMenuAlt3} />
+          }
+        />
       </HStack>
       <List mt="2rem">
         {NavData.length > 0
           ? NavData.map((nav) => (
-              <ListItem p="3px 0" key={nav.id} whiteSpace="nowrap">
-                <Link
-                  p="10px "
-                  borderRadius="8px"
-                  display="flex"
-                  alignItems="center"
-                  color="textThird!important"
-                  _hover={{ bg: "miniCard", color: "textFirst!important" }}
-                  as={RouterLink}
-                  to={nav.page}
+            <ListItem p="3px 0" key={nav.id} whiteSpace="nowrap">
+              <Link
+                p="10px "
+                borderRadius="8px"
+                display="flex"
+                alignItems="center"
+                color="textThird!important"
+                _hover={{ bg: "miniCard", color: "textFirst!important" }}
+                as={RouterLink}
+                to={nav.page}
+                onClick={setNav}
+              >
+                <ListIcon as={nav.icon} fontSize="2xl" />
+                <Text
+                  pl="4px"
+                  fontWeight="500"
+                  visibility={{ base: "visible", lg: hover ? "visible" : "hidden" }}
+                  pointerEvents={{ base: 'all', lg: hover ? "all" : "none" }}
+                  opacity={{ base: "1", lg: hover ? "1" : 0 }}
+                  display="inline"
                 >
-                  <ListIcon as={nav.icon} fontSize="2xl" />
-                  <Text
-                    pl="4px"
-                    fontWeight="500"
-                    visibility={{base:"visible", lg:hover ? "visible" : "hidden"}}
-                    pointerEvents={{base:'all',lg:hover ? "all" : "none"}}
-                    opacity={{base:"1", lg:hover ? "1" : 0}}
-                    display="inline"
-                  >
-                    {nav.name}
-                  </Text>
-                </Link>
-              </ListItem>
-            ))
+                  {nav.name}
+                </Text>
+              </Link>
+            </ListItem>
+          ))
           : ""}
       </List>
     </Box>
