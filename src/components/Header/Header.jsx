@@ -3,16 +3,11 @@ import {
   Container,
   Flex,
   Icon,
-  Input,
-  InputLeftElement,
-  InputGroup,
   HStack,
   IconButton,
   Avatar,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
   useColorMode,
   useColorModeValue,
   Text,
@@ -37,14 +32,8 @@ import { useEffect, useRef, useState } from "react";
 import { BsSun, BsMoonFill, BsBasket } from "react-icons/bs";
 import { HiMenuAlt1 } from "react-icons/hi";
 import {
-  AiOutlineSearch,
-  AiOutlineUser,
-  AiOutlineSetting,
   AiOutlineDelete,
-  AiOutlineMenu,
 } from "react-icons/ai";
-import { MdLogout } from "react-icons/md";
-import { IoIosNotificationsOutline } from "react-icons/io";
 import avatar from "../../assets/img/avatar.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCard } from "../../redux/cardSlice/cardSlice.jsx";
