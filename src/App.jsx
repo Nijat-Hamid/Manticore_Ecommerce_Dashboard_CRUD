@@ -2,14 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { chakra, useColorModeValue, Spinner } from "@chakra-ui/react";
 import bgShapeLight from "./assets/img/effect-onlight.png";
 import bgShapeDark from "./assets/img/effect-ondark.png";
-// import Home from "./pages/Home/Home.jsx";
-// import Layout from "./components/Layout/Layout.jsx";
-// import Products from "./pages/Products/Products.jsx";
-// import Dashboard from "./pages/Dashboard/Dashboard.jsx";
-// import Invoice from "./pages/Invoice/Invoice.jsx";
-// import SingleProducts from "./pages/SingleProduct/SingleProducts.jsx";
-// import TechStack from "./pages/TechStack/TechStack.jsx";
 import { lazy, Suspense } from "react";
+import Splasher from "./components/Splasher/Splasher.jsx";
 
 const HomeLazy = lazy(() => import("./pages/Home/Home.jsx"));
 const ProductsLazy = lazy(() => import("./pages/Products/Products.jsx"));
@@ -33,15 +27,7 @@ function App() {
     >
       <Router>
         <Suspense
-          fallback={
-            <Spinner
-              thickness="4px"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="blue.500"
-              size="xl"
-            />
-          }
+          fallback={<Splasher/>}
         >
           <LayoutLazy>
             <Routes>
