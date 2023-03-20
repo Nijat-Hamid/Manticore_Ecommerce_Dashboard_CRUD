@@ -1,4 +1,5 @@
 import { Box, ListItem, List, Button } from "@chakra-ui/react";
+import { memo } from "react";
 const  Pagination=( {postPerPage, totalPosts,paginate} ) => {
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalPosts.length / postPerPage); i++) {
@@ -17,4 +18,4 @@ const  Pagination=( {postPerPage, totalPosts,paginate} ) => {
   );
 }
 
-export default Pagination;
+export default memo(Pagination);

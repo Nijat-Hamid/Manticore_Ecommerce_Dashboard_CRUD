@@ -2,7 +2,7 @@ import { Flex,Box } from "@chakra-ui/react";
 import Navbar from "../Navbar/Navbar.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Header from "../Header/Header.jsx";
-import { useState } from "react";
+import { useState,memo } from "react";
 function Layout({children}) {
     const [nav,setNav]= useState(false);
     return ( 
@@ -17,4 +17,4 @@ function Layout({children}) {
      );
 }
 
-export default Layout;
+export default memo(Layout);

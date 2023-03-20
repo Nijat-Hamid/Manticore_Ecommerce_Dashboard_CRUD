@@ -18,6 +18,7 @@ import logoLight from "../../assets/img/logo-light.png";
 import logoDark from "../../assets/img/logo-dark.png";
 import { NavData } from "../../data/NavData.jsx";
 import {HiMenuAlt3} from "react-icons/hi"
+import { memo } from "react";
 
 function Navbar({navState,setNav}) {
   const logo = useColorModeValue(logoDark, logoLight);
@@ -106,4 +107,4 @@ function Navbar({navState,setNav}) {
   );
 }
 
-export default Navbar;
+export default memo(Navbar);

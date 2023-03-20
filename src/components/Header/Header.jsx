@@ -28,7 +28,7 @@ import {
   Image,
   Card,
 } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState,memo } from "react";
 import { BsSun, BsMoonFill, BsBasket } from "react-icons/bs";
 import { HiMenuAlt1 } from "react-icons/hi";
 import {
@@ -223,4 +223,4 @@ function Header({ setNav }) {
   );
 }
 
-export default Header;
+export default memo(Header);

@@ -18,7 +18,7 @@ import {
   AiOutlineMinus,
   AiOutlinePlus,
 } from "react-icons/ai";
-import { useState, useEffect } from "react";
+import { useState, useEffect,memo } from "react";
 import { addToCart } from "../../redux/cardSlice/cardSlice.jsx";
 import { useDispatch } from "react-redux";
 import { Link as ChakraLink } from "react-router-dom";
@@ -103,4 +103,4 @@ function Product(props) {
   );
 }
 
-export default Product;
+export default memo(Product);
