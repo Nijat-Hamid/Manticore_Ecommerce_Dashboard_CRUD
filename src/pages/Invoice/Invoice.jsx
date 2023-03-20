@@ -19,6 +19,7 @@ import {
 import logoLight from "../../assets/img/logo-light.png";
 import logoDark from "../../assets/img/logo-dark.png";
 import { useSelector } from "react-redux";
+import { memo } from "react";
 function Invoice() {
   const logo = useColorModeValue(logoDark, logoLight);
   const basket = useSelector((state) => state.cart.cardItems);
@@ -189,4 +190,4 @@ function Invoice() {
   );
 }
 
-export default Invoice;
+export default memo(Invoice);
