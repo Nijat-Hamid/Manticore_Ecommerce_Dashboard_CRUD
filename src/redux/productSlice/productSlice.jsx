@@ -27,9 +27,7 @@ export const patchProducts = createAsyncThunk(
   async(values,{dispatch}) =>{
     const response = await Api.patch(`products/${values.id}.json`,{
       id:`${values.id}`,
-      image:`${values.image}`,
       name:`${values.name}`,
-      category:`${values.category}`,
       config:{
         date:`${values.date}`,
         color:`${values.color}`,
@@ -49,6 +47,8 @@ export const addProducts = createAsyncThunk(
   "products/addProducts",
   async(values,{dispatch}) =>{
     const response = await Api.put(`products/${values.id}.json`,{
+      category:`${values.category}`,
+      image:`${values.image}`,
       category:`${values.category}`,
       id:`${values.id}`,
       name:`${values.name}`,

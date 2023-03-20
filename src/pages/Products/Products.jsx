@@ -56,6 +56,7 @@ import {
   fetchProducts,
   deleteProducts,
   patchProducts,
+  addProducts
 } from "../../redux/productSlice/productSlice.jsx";
 import { jsonDownload } from "../../redux/jsonSlice/jsonSlice.jsx";
 import { useSelector, useDispatch } from "react-redux";
@@ -208,6 +209,7 @@ const Products = () => {
                   setTimeout(() => {
                     dispatch(patchProducts(values));
                     actions.setSubmitting(false);
+                    onClosed();
                     toast({
                       title: `"${values.name}" is updated`,
                       status: "success",
@@ -504,13 +506,13 @@ const Products = () => {
                 }}
                 onSubmit={(values, actions) => {
                   setTimeout(() => {
-                    dispatch(patchProducts(values));
-                    // alert(JSON.stringify(values, null, 2))
+                    dispatch(addProducts(values));
                     actions.setSubmitting(false);
+                    onCloseModal();
                     toast({
                       title: `"${values.name}" is created`,
                       status: "success",
-                      duration: 7000,
+                      duration: 5000,
                       isClosable: true,
                       position: "bottom-right",
                     });
