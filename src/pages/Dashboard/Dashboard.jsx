@@ -25,7 +25,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { memo } from "react";
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 import { TransactionData } from "../../data/TransactionData.jsx";
@@ -210,4 +209,4 @@ function Dashboard() {
   );
 }
 
-export default memo(Dashboard);
+export default Dashboard;

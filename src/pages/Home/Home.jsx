@@ -7,7 +7,7 @@ import {
   Select,
   HStack,
 } from "@chakra-ui/react";
-import { useEffect, useState,memo } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Product from "../../components/Product/Product.jsx";
 import { fetchProducts } from "../../redux/productSlice/productSlice.jsx";
@@ -82,4 +82,4 @@ function Home() {
   );
 }
 
-export default memo(Home);
+export default Home;

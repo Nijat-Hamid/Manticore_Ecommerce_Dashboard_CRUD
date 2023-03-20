@@ -61,7 +61,6 @@ import { jsonDownload } from "../../redux/jsonSlice/jsonSlice.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../../firebase/Firebase.jsx";
-import { memo } from "react";
 const Products = () => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.products.products);
@@ -926,4 +925,4 @@ const Products = () => {
   );
 };
 
-export default memo(Products);
+export default Products;
