@@ -70,7 +70,7 @@ function Home() {
             />
           ):<SimpleGrid py="20px" columns={{base:"1",sm:"2",md:"3",xl:"4"}} spacing={{base:"10px",sm:"20px",lg:"20px",}}>
           {products.length > 0 ? (
-            products.map((product) => (
+            products.map((product) => product!== null && (
               <Product product={product} key={product.id} />
             ))
           ) : ""}
