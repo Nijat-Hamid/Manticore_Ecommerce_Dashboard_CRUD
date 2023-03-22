@@ -17,7 +17,7 @@ function Home() {
   const [filter, setFilter] = useState(" ");
   const dispatch = useDispatch();
   const apiProducts = useSelector((state) => state.products.products);
-  const filteredData = filter == " " ? apiProducts : apiProducts.filter((filterProduct) => filterProduct.category == filter); 
+  const filteredData = filter == " " ? apiProducts : apiProducts.filter((filterProduct) => filterProduct?.category == filter); 
   const sortedData= sort == "reversed" ? [...filteredData].reverse() : filteredData;
   const [currentPage,setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8)
@@ -31,6 +31,12 @@ function Home() {
     dispatch(fetchProducts());
   }, [dispatch]);
   
+  useEffect(()=>{
+    window.scrollTo({
+      behavior:"smooth",
+      top:"0px"
+    })
+  },[currentPage])
   return (
     <Box minH="90vh">
       <Container maxW="1400px" centerContent>
