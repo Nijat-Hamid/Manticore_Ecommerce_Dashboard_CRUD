@@ -17,7 +17,7 @@ function Home() {
   const [filter, setFilter] = useState(" ");
   const dispatch = useDispatch();
   const apiProducts = useSelector((state) => state.products.products);
-  const filteredData = filter == " " ? apiProducts : apiProducts.filter((filterProduct) => filterProduct?.category == filter); 
+  const filteredData = filter == " " ? apiProducts.filter((filtered) => filtered !== null) : apiProducts.filter((filterProduct) => filterProduct !==null && filterProduct?.category == filter); 
   const sortedData= sort == "reversed" ? [...filteredData].reverse() : filteredData;
   const [currentPage,setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8)

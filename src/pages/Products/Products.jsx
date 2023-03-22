@@ -65,7 +65,8 @@ import { storage } from "../../firebase/Firebase.jsx";
 import { memo } from "react";
 const Products = () => {
   const dispatch = useDispatch();
-  const productList = useSelector((state) => state.products.products);
+  const filteredData = useSelector((state) => state.products.products);
+  const productList = filteredData.filter((filtered) => filtered !== null);
   const isLoading = useSelector((state) => state.products.isLoading);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
