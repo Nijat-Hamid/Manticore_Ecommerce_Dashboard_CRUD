@@ -98,6 +98,12 @@ const Products = () => {
     .slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  useEffect(()=>{
+    window.scrollTo({
+      behavior:"smooth",
+      top:"0px"
+    })
+  },[currentPage])
   const [json, setJson] = useState(false);
 
   useEffect(() => {
@@ -792,7 +798,7 @@ const Products = () => {
             </ModalBody>
           </ModalContent>
         </Modal>
-        <Box bg="cardBg" p={2} borderRadius="8px">
+        <Box bg="cardBg"  p={2} borderRadius="8px">
           <Stack
             direction={{base:"column", sm:"row"}}
             justify="space-between"
@@ -842,7 +848,7 @@ const Products = () => {
               display="block"
             />
           ) : (
-            <TableContainer my={3}  maxW={{base:""}} >
+            <TableContainer my={3}  >
               <Table variant="simple">
                 <Thead>
                   <Tr>
