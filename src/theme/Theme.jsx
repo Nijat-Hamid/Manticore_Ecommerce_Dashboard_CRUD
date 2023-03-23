@@ -58,9 +58,6 @@ const theme = extendTheme({
         fontFamily: "body",
         bg: "bodyColor",
         color: "textFirst",
-        bgRepeat: "no-repeat",
-        bgAttachment: "fixed",
-        minH: "100%",
       },
       a: {
         color: "linkColor!important",
